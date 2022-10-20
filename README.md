@@ -9,7 +9,7 @@ En base a esta problemática que actualmente enfrenta el país he tomado la inic
 
 Los primeros serán las personas que quieran adquirir los productos y puedan checar los precios por medio del compilador creado y de esta manera poder recurrir a los lugares donde los precios sean más accesibles.
 
-Los segundos usuarios serán personas o tiendas que nos ayuden con la recopilación de datos para de esta manera poder brindarle a las personas información certera y que se haya obtenido de una fuente de información confiable.
+
 
 1. Algoritmo de control o menú (hacer lo que el usuario le indique)
    opcion= proporcionado por el usuario
@@ -17,38 +17,41 @@ Los segundos usuarios serán personas o tiendas que nos ayuden con la recopilaci
 0. Pedir opcion al usuario 
 
 1. Si opcion = 1 
-1.1 Ejecutar “buscar producto” algo que vamos a buscar
+1.1 Ejecutar “buscar producto” sera la opción donde el usuario podrá ver el menor precio de un objeto indicado por el usuario
+
 2. Si opcion = 2
-2.1 Ejecutar “mostrar todo los productos”
+2.1 Ejecutar “calculate basic basket” dara el precio al usuario de la canasta básica buscando en cada producto el precio menor
+
 3. Si opción=3
-ejecutar “registrar un producto”
-4.Si opción =4
-4.1 finalizar 
+ejecutar “precio promedio” sumara el precio de todos los productos del programa y dará un resultado promedio
+
+
 Algoritmo “buscar producto”
-En lista buscar el producto que ingrese el usuario y mostrar el resultado (precios del producto, tienda donde puede ser adquirido)
+
+En lista buscar el producto que ingrese el usuario y mostrar la mejor opción donde el usuario pueda comprarlo
 
 Variables
 
 1. lista_productos
 2. producto_buscar
 3. intentos=0
+
+
 Pasos
 
 1. Pedir producto al usuario 
-2. intentos=intentos+1
-3. Para cada producto en la lista 
-   3.1 si nombre_producto=producto_buscar 
-       3.1.1 Mostrar datos del producto
-       3.1.2 Terminar algoritmo
-4. Si intentos <5 
-   4.1 volver a paso 1
-5. Si no 
-   5.1 volver a menu 
-   
-Algoritmo “mostrar todos los productos”
-Mostrar todos los productos, pero de cada producto mostrar cual es la tienda donde puedes adquirirlo al menor costo 
 
-Variables:
+3. Depende del producto que ingrese:
+   2.1 Buscarlo en las listas
+     2.1.1 En cada lista buscar el mejor precio es decir el menor
+    
+4. Mostrar al usuario la mejor opción
+
+6. Terminar el ciclo
+   
+Algoritmo “calcular precio de la canasta basica”
+
+Mostrar el precio de la canasta básica buscando en cada uno de los productos guardados y así dar un precio de la canasta con el menor costo.
 
 1. productos_buscar
 2. precio_minimo
@@ -57,29 +60,33 @@ Pasos
 
 1. Si opción=4 
    1.1 Por cada producto en la lista
-   1.2 si nombre_producto=producto_buscar
-   1.3 Buscar precio_minimo 
-2. Mostrar precio_minimo
-3. Terminar algoritmo
+   1.2 Buscar precio_minimo
+
+2. Guardar precio_minimo en una variable
+
+4. Sumar todos los productos con los precios menores
+
+6. Dar el precio de la canasta básica
 
 
-Algoritmo “ registrar producto ”
-Para obtener un mejor desarrollo del programa y una optimización acerca de la actualización de los precios existe esta opción que te permitirá capturar los precios y las tiendas donde los podrás adquirir.
+Algoritmo “ precio promedio de todos los productos ”
+
+Para obtener los precios promedio de todos los productos guardados para de esta amenra el usuario se pueda dar una idea del precio promedio de cada uno de los proctos
 
 Variables:
-1. registrar_producto
+
+1. precio_promedio
 2. precio_producto
-3. tienda_nombre
+3. final_price
 
 Pasos:
 1. si opción=4
    1.1 producto_buscar
-   1.2 si nombre_producto=producto_buscar
-2. ingresar producto_precio
-   2.1 si solo desea cambiar precio_producto
-   2.2 si salir, no registrar tienda_nombre
-3. ingresar tienda_nombre
-   3.1 finalizar
+   1.2 buscar en productos todos los precios 
+  
+2. Guardar todos los precios
+   2.1 Sumar todos los precios y dividirlos entre la cantidad de productos que tenemos
+   2.2 Dar el precio promedio de los productos al usuario
  
 
 
